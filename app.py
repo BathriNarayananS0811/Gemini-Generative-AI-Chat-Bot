@@ -1,6 +1,3 @@
-# Q&A Chatbot
-#from langchain.llms import OpenAI
-
 from dotenv import load_dotenv
 
 load_dotenv()  # take environment variables from .env.
@@ -32,7 +29,7 @@ def get_gemini_response(question):
 
 ##initialize our streamlit app
 
-st.set_page_config(page_title="Q&A Demo")
+st.set_page_config(page_title="BNSAI CHATBOT")
 
 st.header("Gemini Application")
 
@@ -46,5 +43,4 @@ submit=st.button("Ask the question")
 if submit:
     
     response=get_gemini_response(input)
-    st.subheader("The Response is")
     st.write(response)
